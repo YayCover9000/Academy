@@ -5,6 +5,5 @@ public class Main {
         //ExerciseTwo.ExerciseTwo();
         //ExerciseThree.ExerciseThree();
         //ExerciseFour.ExerciseFour();
-        CoffeeComperator.CoffeeComperator();
     }
 }
