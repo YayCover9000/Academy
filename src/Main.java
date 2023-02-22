@@ -2,6 +2,7 @@ public class Main {
     public static void main(String[] args) {
         System.out.println("Hello world!");
         //ExerciseOne.ExerciseOne();
-        ExerciseTwo.ExerciseTwo();
+       //ExerciseTwo.ExerciseTwo();
+        ExerciseThree.ExerciseThree();
     }
 }
