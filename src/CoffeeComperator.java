@@ -1,12 +1,13 @@
 import java.util.Scanner;
+import java.util.ArrayList;
 public class CoffeeComperator {
     public static void CoffeeComperator() {
         Scanner sc = new Scanner(System.in);
-        String array[];
-        String coffeeType = sc.nextLine();
-
-        while (sc.hasNextLine()) {
-        }
-        System.out.println(coffeeType);
+        ArrayList<String> coffeeTypesIncludedInAbo = new ArrayList<String>();
+        String coffeeTypes = sc.nextLine();
+            do {coffeeTypesIncludedInAbo.add(coffeeTypes);
+                coffeeTypes = sc.nextLine();
+            }while (!coffeeTypes.equals("END"));
+            sc.close();
     }
 }
