@@ -18,8 +18,17 @@ public class ExerciseSix {
             System.out.print("False");
         } */
 
-        boolean comp = false;
+        /* boolean comp = false;
         if ((input >= -15 && input < 12) || (input > 14 && input < 17) || (input >= 19)) {
+            comp = true;
+        } if (comp == true) {
+            System.out.print("True");
+        } else if (comp == false) {
+            System.out.print("False");
+        } */
+
+        boolean comp = false;
+        if ((-15 < input && input <= 12) || (-14 < input && input < 17) || 19 <= input) {
             comp = true;
         } if (comp == true) {
             System.out.print("True");
