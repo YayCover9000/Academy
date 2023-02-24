@@ -4,6 +4,6 @@ public class Main {
         //ExerciseOne.ExerciseOne();
         //ExerciseTwo.ExerciseTwo();
         //ExerciseThree.ExerciseThree();
-        //ExerciseFour.ExerciseFour();
+        ExerciseFour.ExerciseFour();
     }
 }
