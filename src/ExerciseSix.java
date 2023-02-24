@@ -38,7 +38,8 @@ public class ExerciseSix {
         boolean range3 = five <= input;
         if (range1 || range2 || range3) {
             comp = true;
-        } if (comp) {
+        }
+        if (comp) {
             System.out.print("True");
         } else if (!comp) {
             System.out.print("False");
