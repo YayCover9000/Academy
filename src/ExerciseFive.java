@@ -13,7 +13,7 @@ public class ExerciseFive {
         boolean statment2 = firstNumBiggerThirdNum && firstNumSmallerSecNum;
         boolean output = false;
 
-        if(statement1 || statment2){
+        if  (statement1 || statment2)   {
             output = true;
         }
         System.out.print(output);
