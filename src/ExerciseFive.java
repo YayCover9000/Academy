@@ -17,5 +17,7 @@ public class ExerciseFive {
             output = true;
         }
         System.out.print(output);
+        scanner.close();
+
     }
 }

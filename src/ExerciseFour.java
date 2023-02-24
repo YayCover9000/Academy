@@ -10,7 +10,7 @@ of old with new that can be chars or strings. */
         Scanner scanner = new Scanner(System.in);
         String input = scanner.nextLine();
         System.out.print(input.replace('a', 'b'));
-
+        scanner.close();
 
     }
 }
