@@ -11,7 +11,7 @@ public class ExerciseFive {
         boolean firstNumBiggerThirdNum = firstNumber >= thirdNumber;
         boolean output = false;
 
-        if((firstNumBigerSecNum && firstNumSmallerThirdNum) ^ (firstNumBiggerThirdNum && firstNumSmallerSecNum)){
+        if((firstNumBigerSecNum && firstNumSmallerThirdNum) || (firstNumBiggerThirdNum && firstNumSmallerSecNum)){
             output = true;
         }
         System.out.print(output);
