@@ -8,10 +8,24 @@ public class ExerciseSix {
 /* zahl <= -15 && zahl > 12 && 13,14 && 17,18,19 */
         Scanner scanner = new Scanner(System.in);
         int input = scanner.nextInt();
-        boolean comp = true;
-        if (((input < -15) || (input >= 12)) && input < 14 || input > 17 && input < 19) {
+       /* boolean comp = true;
+        if (((input < -15) && (input > 12)) && input < 14 && input > 17 && input < 19) {
             comp = false;
         }
-        System.out.print(comp);
+        if (comp == true) {
+            System.out.print("True");
+        } else if (comp == false) {
+            System.out.print("False");
+        } */
+
+        boolean comp = false;
+        if ((input >= -15 && input < 12) || (input > 14 && input < 17) || (input >= 19)) {
+            comp = true;
+        } if (comp == true) {
+            System.out.print("True");
+        } else if (comp == false) {
+            System.out.print("False");
+        }
+
     }
 }
