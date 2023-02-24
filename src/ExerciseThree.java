@@ -1,5 +1,5 @@
 public class ExerciseThree {
-    public static void ExerciseThree() {
+    public static void exerciseThree() {
         int a = -1;
         int b = a++;
         int c = b;

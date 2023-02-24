@@ -1,5 +1,5 @@
 public class ExerciseOne {
-    public static void ExerciseOne() {
+    public static void exerciseOne() {
         int a = 9;
         int b = 0;
         int array[] = new int[10];

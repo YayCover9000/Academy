@@ -2,10 +2,11 @@
 public class Main {
     public static void main(String[] args) {
         System.out.println("Hello world!");
-        //ExerciseOne.ExerciseOne();
-        //ExerciseTwo.ExerciseTwo();
-        //ExerciseThree.ExerciseThree();
-        //ExerciseFour.ExerciseFour();
-        ExerciseFive.exerciseFive();
+        //ExerciseOne.exerciseOne();
+        //ExerciseTwo.exerciseTwo();
+        //ExerciseThree.exerciseThree();
+        //ExerciseFour.exerciseFour();
+        //ExerciseFive.exerciseFive();
+        ExerciseSix.exerciseSix();
     }
 }

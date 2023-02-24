@@ -1,7 +1,7 @@
 import java.util.Scanner;
 
 public class ExerciseFour {
-    public static void ExerciseFour() {
+    public static void exerciseFour() {
 /**Write a program that reads a string and replaces all occurrences of the letter 'a' with the letter 'b'.
 The program should print out the resulting string.*/
 /* replace(old, new) returns a new string obtained by replacing all occurrences
