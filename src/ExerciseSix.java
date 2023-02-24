@@ -28,7 +28,7 @@ public class ExerciseSix {
         } */
 
         boolean comp = false;
-        if ((-15 < input && input <= 12) || (-14 < input && input < 17) || 19 <= input) {
+        if ((-15 < input && input <= 12) || (14 < input && input < 17) || 19 <= input) {
             comp = true;
         } if (comp == true) {
             System.out.print("True");
