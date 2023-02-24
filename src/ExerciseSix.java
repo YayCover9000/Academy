@@ -8,5 +8,10 @@ public class ExerciseSix {
 /* zahl <= -15 && zahl > 12 && 13,14 && 17,18,19 */
         Scanner scanner = new Scanner(System.in);
         int input = scanner.nextInt();
+        boolean comp = true;
+        if (((input < -15) || (input >= 12)) && input < 14 || input > 17 && input < 19) {
+            comp = false;
+        }
+        System.out.print(comp);
     }
 }
