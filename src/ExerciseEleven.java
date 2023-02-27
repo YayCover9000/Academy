@@ -25,6 +25,7 @@ public class ExerciseEleven{
 
         int gesSeats = numRows * numSeats;
         System.out.println(gesSeats);
+        scanner.close();
         //checks if gesSeats are Even or Odd
         boolean evenFromCheck = ExerciseEleven.evenOrOdd(gesSeats, even);
         if ( gesSeats <= 60) {
@@ -37,7 +38,7 @@ public class ExerciseEleven{
         }
         else {
             System.out.println("is ODD");
-            ExerciseEleven.over60Odd(price10, price8, numSeats, numRows);
+            ExerciseEleven.over60Odd(gesSeats, price10, price8, numSeats, numRows);
         }
     }
 
@@ -61,6 +62,7 @@ public class ExerciseEleven{
         return value % 2 !=0;
     }
     private static void over60Even(int gesSeats, int price10, int price8) {
+        //ExerciseEleven.helpMeCalc(price10, price8);
         gesSeats = gesSeats / 2;
         int PriceFront = gesSeats * price10;
         int PriceBack = gesSeats * price8;
@@ -68,22 +70,38 @@ public class ExerciseEleven{
         System.out.println(gesPriceRoomOver60 + "€ in over60EVEN");
         System.out.println("Total income:" + "\n" + "$" + gesPriceRoomOver60);
     }
-    private static void over60Odd(int price10, int price8, int numSeats, int numRows) {
-        ExerciseEleven.helpMeCalc(price10, price8);
+    private static void over60Odd(int gesSeats, int price10, int price8, int numSeats, int numRows) {
+        //ExerciseEleven.helpMeCalc(price10, price8);
+        int numRowsMod = numRows % 2; ///PROBLEEEEEEM
+        System.out.println("hdsjiahdjshj: " + numRowsMod);
+        //int numRowsModDiv = numRowsMod / 2;
+        int numRowsModFront = numRowsMod;
+        int numRowsModBack = gesSeats - numRowsMod;
         //Calculating Seats in BackBlock + Price 8€
-        int numRowsBack = ((numRows * numSeats) + numSeats) / 2; // 77 + 7 = 84  84 / 2 = 42
+        System.out.println("numRowsBack: " + numRowsModBack);
+        int priceNumRowBack = numRowsModBack * price8;
+        System.out.println("priceNumRowBack: " + priceNumRowBack);
+        //Calculating Seats in FrontRow + Price 10€
+        System.out.println("numRowsFront: " + numRowsModFront);
+        int priceNumRowFront = numRowsModFront * price10;
+        System.out.println("priceNumRowFront: " + priceNumRowFront);
+        //Calculating Price for whole Cinema
+        int gesPriceRoomOver60 = priceNumRowFront + priceNumRowBack;
+        System.out.println("Total income:" + "\n" + "$" + gesPriceRoomOver60);
+
+        /*int numRowsBack = ((numRows * numSeats) + numSeats) / 2; // 77 + 7 = 84  84 / 2 = 42
         System.out.println("numRowsBack: " + numRowsBack);
         int priceNumRowBack = numRowsBack * price8;
         System.out.println("priceNumRowBack: " + priceNumRowBack);
-        //Calculating Seats in FrontRow + Price 10€
+
         int numRowsFront = ((numRows * numSeats) - numSeats) / 2; // 77 - 7 = 70 70 / 2 = 35
         System.out.println("numRowsFront: " + numRowsFront);
         int priceNumRowFront = numRowsFront * price10;
         System.out.println("priceNumRowFront: " + priceNumRowFront);
-        //Calculating Price for whole Cinema
+
         int gesPriceRoomOver60 = priceNumRowFront + priceNumRowBack;
         System.out.println(gesPriceRoomOver60 + "€ in Automatic Calc in over60ODD");
-        System.out.println("Total income:" + "\n" + "$" + gesPriceRoomOver60);
+        System.out.println("Total income:" + "\n" + "$" + gesPriceRoomOver60);*/
 
     }
     private static void helpMeCalc(int price10, int price8) {
@@ -91,7 +109,7 @@ public class ExerciseEleven{
         int numRows = 8;
         int numSeats = 9;
         //Calculating Seats in BackBlock + Price 8€
-        int numRowsBack = ((numRows * numSeats) + numSeats) / 2; // 72 + 9 = 81  81 / 2 = 40,5
+        int numRowsBack = ((numRows * numSeats) +  numSeats) / 2; // 72 + 9 = 81  81 / 2 = 40,5
         System.out.println("numRowsBack: " + numRowsBack);
         int priceNumRowBack = numRowsBack * price8;
         System.out.println("priceNumRowBack: " + priceNumRowBack);
