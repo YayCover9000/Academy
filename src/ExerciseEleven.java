@@ -28,7 +28,11 @@ public class ExerciseEleven{
         //checks if gesSeats are Even or Odd
         boolean evenFromCheck = ExerciseEleven.evenOrOdd(gesSeats, even);
         //System.out.println(even);
-        if (evenFromCheck) {
+        if ( gesSeats <= 60) {
+            totalIncome = gesSeats * 10;
+            System.out.println("Total income:" + "\n" + "$" + totalIncome);
+        }
+        else if (evenFromCheck) {
             System.out.println("is EVEN");
             ExerciseEleven.over60Even(gesSeats, price10, price8);
         }
@@ -62,7 +66,8 @@ public class ExerciseEleven{
         int PriceFront = gesSeats * price10;
         int PriceBack = gesSeats * price8;
         int gesPriceRoomOver60 = PriceFront + PriceBack;
-        System.out.print(gesPriceRoomOver60 + "€");
+        System.out.println(gesPriceRoomOver60 + "€");
+        System.out.println("Total income:" + "\n" + "$" + gesPriceRoomOver60);
     }
     private static void over60Odd(int price10, int price8, int numSeats, int numRows) {
         ExerciseEleven.helpMeCalc(price10, price8);
@@ -78,8 +83,8 @@ public class ExerciseEleven{
         System.out.println("priceNumRowFront: " + priceNumRowFront);
         //Calculating Price for whole Cinema
         int gesPriceRoomOver60 = priceNumRowFront + priceNumRowBack;
-        System.out.print(gesPriceRoomOver60 + "€ in Automatic Calc");
-        System.out.println("Total income:" + gesPriceRoomOver60);
+        System.out.println(gesPriceRoomOver60 + "€ in Automatic Calc");
+        System.out.println("Total income:" + "\n" + "$" + gesPriceRoomOver60);
 
     }
     private static void helpMeCalc(int price10, int price8) {
@@ -99,7 +104,7 @@ public class ExerciseEleven{
         //Calculating Price for whole Cinema
         int gesPriceRoomOver60 = priceNumRowFront + priceNumRowBack;
         System.out.println(gesPriceRoomOver60 + "€ in Manual Calc");
-        System.out.println("Total income:" + gesPriceRoomOver60);
+        System.out.println("Total income:" + "\n" + "$" + gesPriceRoomOver60);
         System.out.println("______________________________________________________________________________");
     }
 
