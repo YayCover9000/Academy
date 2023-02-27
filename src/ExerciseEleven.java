@@ -71,16 +71,37 @@ public class ExerciseEleven{
         System.out.print(gesPriceRoomOver60 + "€");
 
         if(numRows % 2 == 1) { */
+        ExerciseEleven.helpMeCalc(price10, price8/*, gesSeats, numSeats, numRows*/);
             int numRowBack = numRows - numSeats; //one Row less
             int numRowsFront = numRows + numSeats; //add one Row
-            int priceNumRowBack = numRowBack * price8;
-            int priceNumRowFront = numRowsFront * price10;
+            int priceNumRowBack = (numRowBack * numSeats) * price8;
+            int priceNumRowFront = (numRowsFront * numSeats) * price10;
             int gesPriceRoomOver60 = priceNumRowFront + priceNumRowBack;
-            System.out.print(gesPriceRoomOver60 + "€");
+            System.out.print(gesPriceRoomOver60 + "€ in Automatic Calc");
+
         /* }
         else {
 
         } */
+    }
+    private static void helpMeCalc(int price10, int price8/*, int gesSeats, int numSeats, int numRows*/) {
+        int numRows = 11;
+        int numSeats = 7;
+        int numRowsBack = ((numRows * numSeats) - numSeats) / 2; // 77 - 7 = 70 70 / 2 = 35
+        System.out.println("numRowsBack: " + numRowsBack);
+        /* int numRowsBackDev2 = numRowsBack / 2; // 70 / 2 = 35
+        System.out.println("numRowsBackDev2: " + numRowsBackDev2); */
+        int priceNumRowBack = numRowsBack * price8;
+        System.out.println("priceNumRowBack: " + priceNumRowBack);
+
+        int numRowsFront = ((numRows * numSeats) + numSeats) / 2; // 77 + 7 = 84  84 / 2 = 42
+        System.out.println("numRowsFront: " + numRowsFront);
+        /* int numRowsFrontDev2 = numRowsFront / 2;
+        System.out.println("numRowsFrontDev2" + numRowsFrontDev2); */
+        int priceNumRowFront = numRowsFront * price10;
+        System.out.println("priceNumRowFront: " + priceNumRowFront);
+        int gesPriceRoomOver60 = priceNumRowFront + priceNumRowBack;
+        System.out.println(gesPriceRoomOver60 + "€ in Manual Calc");
     }
 
 }
