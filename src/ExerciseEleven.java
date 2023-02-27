@@ -1,4 +1,4 @@
-/**Programm to Solve an Exercise in JetBrainsAcademy
+/** Program to Solve an Exercise in JetBrainsAcademy
  * it shall calculate the price for seats in a Cinema
  *
  * @autor Yassuan Foljanty Catanzaro
@@ -13,62 +13,29 @@ public class ExerciseEleven{
                                                                                 > 7
                                                                                 Total income:
                                                                                 $560 */
-        int value;
-        int price;
+        int price10 = 10;
+        int price8 = 8;
+        int totalIncome = 0;
         boolean even = false;
         //accesses evenOrOdd for numRows
         int numRows = scanner.nextInt();
-                                                                            /* value = numRows;
-                                                                            ExerciseEleven.evenOrOdd(value, even); */
-                                                                            //accesses evenOrOdd for numSeats
+
         int numSeats = scanner.nextInt();
-                                                                            /* value = numSeats;
-                                                                            ExerciseEleven.evenOrOdd(value, even); */
-                                                                            //calculates all Seats in room
+
         int gesSeats = numRows * numSeats;
         System.out.println(gesSeats);
         //checks if gesSeats are Even or Odd
-        value = gesSeats;
-        ExerciseEleven.evenOrOdd(value, even);
-        System.out.println(even);
-        if (!even) {
-
+        boolean evenFromCheck = ExerciseEleven.evenOrOdd(gesSeats, even);
+        //System.out.println(even);
+        if (evenFromCheck) {
+            System.out.println("is EVEN");
+            ExerciseEleven.over60Even(gesSeats, price10, price8);
         }
         else {
-
+            System.out.println("is ODD");
+            ExerciseEleven.over60Odd(gesSeats, price10, price8, numSeats, numRows);
         }
-
-         //gesSeats smaller 60
-            if (gesSeats <= 60) {
-                price = 10;
-                System.out.print(price + "€ per Seat");
-            }
-                                                                /* case 1: //gesSeats bigger 60
-                                                                    if (gesSeats > 60) {
-                                                                        System.out.println(" more then 60 Seats");
-                                                                        boolean gesSeatsEven = false; */
-                                                                 /*if ( numRows % 2 == 0) { //gesSeats Even
-                                                                            gesSeatsEven = true;
-                                                                        }
-                                                                        if (gesSeatsEven == true) {
-                                                                            int frontPart = numRows / 2;
-                                                                            int frontPartPrice = 10 * frontPart;
-                                                                            System.out.println();
-                                                                        } */
-                   // int totalIncome = frontPartPrice *
-        }
-
-
-            /* //Does not give out remainder
-            numRows = numRows / 2;
-            System.out.println(numRows); */
-
-
-        //System.out.println("give me a value to determan if odd or not");
-        //int value = scanner.nextInt();
-
-
-
+    }
 
     private static boolean evenOrOdd(int value, boolean even){
 
@@ -88,6 +55,32 @@ public class ExerciseEleven{
     }
     private static boolean isOdd(int value) {
         return value % 2 !=0;
+    }
+    private static void over60Even(int gesSeats, int price10, int price8) {
+        gesSeats = gesSeats / 2;
+        int PriceFront = gesSeats * price10;
+        int PriceBack = gesSeats * price8;
+        int gesPriceRoomOver60 = PriceFront + PriceBack;
+        System.out.print(gesPriceRoomOver60 + "€");
+    }
+    private static void over60Odd(int gesSeats, int price10, int price8, int numSeats, int numRows) {
+        /* gesSeats = gesSeats % 2;
+        int PriceFront = (gesSeats + numSeats) * price10;
+        int PriceBack = gesSeats * price8;
+        int gesPriceRoomOver60 = PriceFront + PriceBack;
+        System.out.print(gesPriceRoomOver60 + "€");
+
+        if(numRows % 2 == 1) { */
+            int numRowBack = numRows - numSeats; //one Row less
+            int numRowsFront = numRows + numSeats; //add one Row
+            int priceNumRowBack = numRowBack * price8;
+            int priceNumRowFront = numRowsFront * price10;
+            int gesPriceRoomOver60 = priceNumRowFront + priceNumRowBack;
+            System.out.print(gesPriceRoomOver60 + "€");
+        /* }
+        else {
+
+        } */
     }
 
 }
