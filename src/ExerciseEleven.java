@@ -18,8 +18,9 @@ public class ExerciseEleven{
         int totalIncome = 0;
         boolean even = false;
         //accesses evenOrOdd for numRows
+        System.out.println("Enter the number of rows:");
         int numRows = scanner.nextInt();
-
+        System.out.println("Enter the number of Seats:");
         int numSeats = scanner.nextInt();
 
         int gesSeats = numRows * numSeats;
@@ -33,7 +34,7 @@ public class ExerciseEleven{
         }
         else {
             System.out.println("is ODD");
-            ExerciseEleven.over60Odd(gesSeats, price10, price8, numSeats, numRows);
+            ExerciseEleven.over60Odd(price10, price8, numSeats, numRows);
         }
     }
 
@@ -63,45 +64,40 @@ public class ExerciseEleven{
         int gesPriceRoomOver60 = PriceFront + PriceBack;
         System.out.print(gesPriceRoomOver60 + "€");
     }
-    private static void over60Odd(int gesSeats, int price10, int price8, int numSeats, int numRows) {
-        /* gesSeats = gesSeats % 2;
-        int PriceFront = (gesSeats + numSeats) * price10;
-        int PriceBack = gesSeats * price8;
-        int gesPriceRoomOver60 = PriceFront + PriceBack;
-        System.out.print(gesPriceRoomOver60 + "€");
-
-        if(numRows % 2 == 1) { */
-        ExerciseEleven.helpMeCalc(price10, price8/*, gesSeats, numSeats, numRows*/);
-            int numRowBack = numRows - numSeats; //one Row less
-            int numRowsFront = numRows + numSeats; //add one Row
-            int priceNumRowBack = (numRowBack * numSeats) * price8;
-            int priceNumRowFront = (numRowsFront * numSeats) * price10;
-            int gesPriceRoomOver60 = priceNumRowFront + priceNumRowBack;
-            System.out.print(gesPriceRoomOver60 + "€ in Automatic Calc");
-
-        /* }
-        else {
-
-        } */
-    }
-    private static void helpMeCalc(int price10, int price8/*, int gesSeats, int numSeats, int numRows*/) {
-        int numRows = 11;
-        int numSeats = 7;
+    private static void over60Odd(int price10, int price8, int numSeats, int numRows) {
+        ExerciseEleven.helpMeCalc(price10, price8);
+        //Calculating Seats in BackBlock + Price 8€
         int numRowsBack = ((numRows * numSeats) - numSeats) / 2; // 77 - 7 = 70 70 / 2 = 35
         System.out.println("numRowsBack: " + numRowsBack);
-        /* int numRowsBackDev2 = numRowsBack / 2; // 70 / 2 = 35
-        System.out.println("numRowsBackDev2: " + numRowsBackDev2); */
         int priceNumRowBack = numRowsBack * price8;
         System.out.println("priceNumRowBack: " + priceNumRowBack);
-
+        //Calculating Seats in FrontRow + Price 10€
         int numRowsFront = ((numRows * numSeats) + numSeats) / 2; // 77 + 7 = 84  84 / 2 = 42
         System.out.println("numRowsFront: " + numRowsFront);
-        /* int numRowsFrontDev2 = numRowsFront / 2;
-        System.out.println("numRowsFrontDev2" + numRowsFrontDev2); */
         int priceNumRowFront = numRowsFront * price10;
         System.out.println("priceNumRowFront: " + priceNumRowFront);
+        //Calculating Price for whole Cinema
+        int gesPriceRoomOver60 = priceNumRowFront + priceNumRowBack;
+        System.out.print(gesPriceRoomOver60 + "€ in Automatic Calc");
+    }
+    private static void helpMeCalc(int price10, int price8) {
+        System.out.println("This Methode prints Calculation for 11 Rows and 7 Seats");
+        int numRows = 11;
+        int numSeats = 7;
+        //Calculating Seats in BackBlock + Price 8€
+        int numRowsBack = ((numRows * numSeats) - numSeats) / 2; // 77 - 7 = 70 70 / 2 = 35
+        System.out.println("numRowsBack: " + numRowsBack);
+        int priceNumRowBack = numRowsBack * price8;
+        System.out.println("priceNumRowBack: " + priceNumRowBack);
+        //Calculating Seats in FrontRow + Price 10€
+        int numRowsFront = ((numRows * numSeats) + numSeats) / 2; // 77 + 7 = 84  84 / 2 = 42
+        System.out.println("numRowsFront: " + numRowsFront);
+        int priceNumRowFront = numRowsFront * price10;
+        System.out.println("priceNumRowFront: " + priceNumRowFront);
+        //Calculating Price for whole Cinema
         int gesPriceRoomOver60 = priceNumRowFront + priceNumRowBack;
         System.out.println(gesPriceRoomOver60 + "€ in Manual Calc");
+        System.out.println("______________________________________________________________________________");
     }
 
 }
