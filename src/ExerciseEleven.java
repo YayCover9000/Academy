@@ -20,7 +20,7 @@ public class ExerciseEleven{
         //accesses evenOrOdd for numRows
         System.out.println("Enter the number of rows:");
         int numRows = scanner.nextInt();
-        System.out.println("Enter the number of Seats:");
+        System.out.println("Enter the number of seats in each row:");
         int numSeats = scanner.nextInt();
 
         int gesSeats = numRows * numSeats;
@@ -79,6 +79,8 @@ public class ExerciseEleven{
         //Calculating Price for whole Cinema
         int gesPriceRoomOver60 = priceNumRowFront + priceNumRowBack;
         System.out.print(gesPriceRoomOver60 + "€ in Automatic Calc");
+        System.out.println("Total income:" + gesPriceRoomOver60);
+
     }
     private static void helpMeCalc(int price10, int price8) {
         System.out.println("This Methode prints Calculation for 11 Rows and 7 Seats");
@@ -97,6 +99,7 @@ public class ExerciseEleven{
         //Calculating Price for whole Cinema
         int gesPriceRoomOver60 = priceNumRowFront + priceNumRowBack;
         System.out.println(gesPriceRoomOver60 + "€ in Manual Calc");
+        System.out.println("Total income:" + gesPriceRoomOver60);
         System.out.println("______________________________________________________________________________");
     }
 
