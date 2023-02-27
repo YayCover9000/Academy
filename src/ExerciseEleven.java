@@ -72,11 +72,11 @@ public class ExerciseEleven{
     }
     private static void over60Odd(int gesSeats, int price10, int price8, int numSeats, int numRows) {
         //ExerciseEleven.helpMeCalc(price10, price8);
-        int numRowsMod = numRows % 2; ///PROBLEEEEEEM
-        System.out.println("hdsjiahdjshj: " + numRowsMod);
+        numRows = (numRows - 1) / 2;
+        System.out.println("hdsjiahdjshj: " + numRows);
         //int numRowsModDiv = numRowsMod / 2;
-        int numRowsModFront = numRowsMod;
-        int numRowsModBack = gesSeats - numRowsMod;
+        int numRowsModFront = numRows;
+        int numRowsModBack = gesSeats - numRows;
         //Calculating Seats in BackBlock + Price 8€
         System.out.println("numRowsBack: " + numRowsModBack);
         int priceNumRowBack = numRowsModBack * price8;
